@@ -7,6 +7,8 @@ import {
   useRouteError,
 } from "@remix-run/react";
 
+import { SpeedInsights } from '@vercel/speed-insights/remix';
+
 import Header from "./Header";
 
 import type { LinksFunction } from "@remix-run/node";
@@ -51,6 +53,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <SpeedInsights />
       </body>
     </html>
   );

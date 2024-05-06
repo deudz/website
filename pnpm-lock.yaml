@@ -17,6 +17,9 @@ importers:
       '@remix-run/serve':
         specifier: ^2.9.1
         version: 2.9.1(typescript@5.4.5)
+      '@vercel/speed-insights':
+        specifier: ^1.0.10
+        version: 1.0.10(react@18.3.1)
       isbot:
         specifier: ^4.1.0
         version: 4.4.0
@@ -897,6 +900,29 @@ packages:
 
   '@vanilla-extract/private@1.0.4':
     resolution: {integrity: sha512-8FGD6AejeC/nXcblgNCM5rnZb9KXa4WNkR03HCWtdJBpANjTgjHEglNLFnhuvdQ78tC6afaxBPI+g7F2NX3tgg==}
+
+  '@vercel/speed-insights@1.0.10':
+    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==}
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@web3-storage/multipart-parser@1.0.0':
     resolution: {integrity: sha512-BEO6al7BYqcnfX15W2cnGR+Q566ACXAT9UQykORCWW80lmkpWsnEob6zJS1ZVBKsSJC8+7vJkHwlp+lXG1UCdw==}
@@ -4303,6 +4329,10 @@ snapshots:
       - terser
 
   '@vanilla-extract/private@1.0.4': {}
+
+  '@vercel/speed-insights@1.0.10(react@18.3.1)':
+    optionalDependencies:
+      react: 18.3.1
 
   '@web3-storage/multipart-parser@1.0.0': {}
 

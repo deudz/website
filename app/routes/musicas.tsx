@@ -28,13 +28,12 @@ export default function Musicas() {
         >
           Ultrabox
         </Link>
-        <iframe
-          title="Playlist das músicas"
-          width="560"
-          height="315"
-          src="http://www.youtube.com/embed/videoseries?list=PLom2XLd5AHsvAKUn2hlzNyWWkWNt8XFMm&si=7NfgLxO1DOqX7b0X"
-          allowFullScreen
-        ></iframe>
+        <Link
+          className="underline hover:text-blue-400"
+          to="https://www.youtube.com/watch?v=RAT-OY2Kg7g&list=PLom2XLd5AHsvAKUn2hlzNyWWkWNt8XFMm"
+        >
+          Elas estão nessa playlist do Youtube
+        </Link>
       </p>
     </div>
   );

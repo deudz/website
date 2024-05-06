@@ -1,3 +1,12 @@
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "FallenBrick" },
+    { name: "description", content: "sobre a FallenBrick" },
+  ];
+};
+
 export default function Sobre() {
   return (
     <div className="main-content">

@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-col: #fff;
+  --fg-col: #000;
+
+  --h-hashsign: #777;
+
+  --border-col: #000;
+
+  --navbar-bg: #555;
+  --navbar-size: 75px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-col: #000;
+    --fg-col: #fff;
+
+    --h-hashsign: #555;
+
+    --border-col: #fff;
+
+    --navbar-bg: #333;
+  }
+  .navbar {
+    @apply shadow-none;
+  }
+}
+
+body {
+  background-color: var(--bg-col);
+  color: var(--fg-col);
+}
+
+@layer components {
+  .navbar {
+    @apply flex border-b-2 items-center justify-center;
+    height: var(--navbar-size);
+    background-color: var(--navbar-bg);
+    @apply text-white;
+    border-color: var(--border-col);
+  }
+
+  .navbar-title {
+    @apply text-5xl;
+  }
+
+  .main-content {
+    @apply border-b-2 p-5 relative max-w-5xl m-auto;
+    @apply lg:border-x-2;
+    border-color: var(--border-col);
+  }
+
+  .card {
+    @apply grid m-auto px-2 border-2;
+    @apply place-items-center text-pretty my-2;
+    border-color: var(--border-col);
+  }
+
+  .error-msg {
+    height: calc(100vh - var(--navbar-size));
+  }
+
+  body {
+    @apply text-xl;
+  }
+
+  p {
+    @apply py-2;
+  }
+
+  h1 {
+    @apply text-6xl;
+    @apply my-5;
+  }
+
+  .main-content > h1::before {
+    content: "# ";
+    color: var(--h-hashsign);
+  }
+
+  nav > ul > a {
+    @apply text-2xl;
+    @apply px-3;
+    @apply hover:underline focus:underline;
+  }
+}

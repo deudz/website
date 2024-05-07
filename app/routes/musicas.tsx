@@ -15,24 +15,10 @@ export default function Musicas() {
       <p>Aqui estão algumas músicas que eu fiz.</p>
       <p>
         A maioria delas foi feitas no{" "}
-        <Link
-          className="underline hover:text-blue-400"
-          to="https://beepbox.co/"
-        >
-          Beepbox
-        </Link>{" "}
-        e algumas no{" "}
-        <Link
-          className="underline hover:text-blue-400"
-          to="https://ultraabox.github.io/"
-        >
-          Ultrabox
-        </Link>
+        <Link to="https://beepbox.co/">Beepbox</Link> e algumas no{" "}
+        <Link to="https://ultraabox.github.io/">Ultrabox</Link>
         <br />
-        <Link
-          className="underline hover:text-blue-400"
-          to="https://www.youtube.com/watch?v=RAT-OY2Kg7g&list=PLom2XLd5AHsvAKUn2hlzNyWWkWNt8XFMm"
-        >
+        <Link to="https://www.youtube.com/watch?v=RAT-OY2Kg7g&list=PLom2XLd5AHsvAKUn2hlzNyWWkWNt8XFMm">
           Elas estão nessa playlist do Youtube
         </Link>
       </p>

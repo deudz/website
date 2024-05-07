@@ -57,6 +57,7 @@ body {
   .card {
     @apply grid m-auto px-2 border-2;
     @apply place-items-center text-pretty my-2;
+    @apply hover:border-blue-400;
     border-color: var(--border-col);
   }
 
@@ -82,9 +83,14 @@ body {
     color: var(--h-hashsign);
   }
 
-  nav > ul > a {
+  nav > ul > li > a {
     @apply text-2xl;
     @apply px-3;
     @apply hover:underline focus:underline;
+  }
+
+  .main-content > p > a,
+  .main-conent > a {
+    @apply underline hover:text-blue-400;
   }
 }

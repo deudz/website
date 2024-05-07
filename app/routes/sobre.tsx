@@ -17,7 +17,12 @@ export default function Sobre() {
       </p>
       <div className="flex flex-col justify-center">
         <div className="card">
-          <img src="/eu.png?url" alt="Foto do deudz" width={256} height={256} />
+          <img
+            src="/eu.webp?url"
+            alt="Foto do deudz"
+            width={256}
+            height={256}
+          />
           <p>Danilo Soares (eu!)</p>
         </div>
       </div>

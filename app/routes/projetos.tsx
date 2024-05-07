@@ -21,21 +21,36 @@ export default function Projetos() {
       <div className="flex flex-wrap">
         <div className="card-link">
           <Link className="text-center" to="https://codeberg.org/deudz/rainbow">
-            <img src="/rainbow.png?url" alt="Rainbow icon" width={256} />
+            <img
+              src="/rainbow.webp?url"
+              alt="Rainbow icon"
+              width={256}
+              height={192}
+            />
             Rainbow
           </Link>
           <p className="text-sm text-center">Mostra as cores do seu terminal</p>
         </div>
         <div className="card-link">
           <Link className="text-center" to="https://codeberg.org/deudz/emacs">
-            <img src="/emacs.png?url" alt="Emacs window" width={177} />
+            <img
+              src="/emacs.webp?url"
+              alt="Janela do Emacs"
+              width={177}
+              height={192}
+            />
             Emacs
           </Link>
           <p className="text-sm text-center">Minha configuração do Emacs</p>
         </div>
         <div className="card-link">
           <Link className="text-center" to="https://codeberg.org/deudz/neovim">
-            <img src="/neovim.png?url" alt="Rainbow icon" width={295} />
+            <img
+              src="/neovim.webp?url"
+              alt="Janela do Neovim"
+              width={256}
+              height={167}
+            />
             Neovim
           </Link>
           <p className="text-sm text-center">Configuração do Neovim</p>

@@ -7,9 +7,9 @@ import {
   useRouteError,
 } from "@remix-run/react";
 
-import { SpeedInsights } from '@vercel/speed-insights/remix';
+import { SpeedInsights } from "@vercel/speed-insights/remix";
 
-import Header from "./Header";
+import Navbar from "./Navbar";
 
 import type { LinksFunction } from "@remix-run/node";
 import styles from "~/tailwind.css?url";
@@ -49,7 +49,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Header />
+        <Navbar />
         {children}
         <ScrollRestoration />
         <Scripts />

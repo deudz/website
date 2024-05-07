@@ -11,7 +11,10 @@
   --border-col: #000;
 
   --navbar-bg: #555;
-  --navbar-size: 75px;
+  --navbar-size: 120px;
+  @media (min-width: 768px) {
+    --navbar-size: 75px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,7 +40,7 @@ body {
 
 @layer components {
   .navbar {
-    @apply flex border-b-2 items-center justify-center;
+    @apply flex border-b-2 items-center justify-center md:flex-row flex-col;
     height: var(--navbar-size);
     background-color: var(--navbar-bg);
     @apply text-white;
@@ -46,6 +49,17 @@ body {
 
   .navbar-title {
     @apply text-5xl;
+    @apply mb-3;
+    @apply mx-auto md:ml-4 md:mb-0;
+  }
+
+  .navbar-links {
+    @apply ml-auto mr-4;
+    @apply md:block md:relative absolute hidden;
+  }
+
+  .navbar-mobile {
+    @apply flex md:hidden w-max h-max z-20;
   }
 
   .main-content {
@@ -57,7 +71,13 @@ body {
   .card {
     @apply grid m-auto px-2 border-2;
     @apply place-items-center text-pretty my-2;
-    @apply hover:border-blue-400;
+    border-color: var(--border-col);
+  }
+
+  .card-link {
+    @apply grid m-auto px-2 border-2;
+    @apply place-items-center text-pretty my-2;
+    @apply hover:border-blue-400 focus:border-blue-400;
     border-color: var(--border-col);
   }
 
@@ -75,7 +95,7 @@ body {
 
   h1 {
     @apply text-6xl;
-    @apply my-5;
+    @apply mb-5;
   }
 
   .main-content > h1::before {
@@ -83,14 +103,23 @@ body {
     color: var(--h-hashsign);
   }
 
-  nav > ul > li > a {
+  .navbar-mobile > nav > ul > li > a,
+  .navbar-links > nav > ul > li > a {
     @apply text-2xl;
     @apply px-3;
     @apply hover:underline focus:underline;
   }
 
+  .navbar-links > nav > ul > li {
+    @apply inline-block;
+  }
+
+  .navbar-mobile > nav > ul > li {
+    @apply inline-block px-3;
+  }
+
   .main-content > p > a,
   .main-conent > a {
-    @apply underline hover:text-blue-400;
+    @apply underline hover:text-blue-400 focus:text-blue-400;
   }
 }

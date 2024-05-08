@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <header className="navbar">
       <Link to="/" className="navbar-title z-auto">
         FallenBrick
       </Link>
@@ -40,6 +40,6 @@ export default function Navbar() {
           </ul>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }

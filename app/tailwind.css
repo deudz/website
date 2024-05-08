@@ -6,7 +6,7 @@
   --bg-col: #fff;
   --fg-col: #000;
 
-  --h-hashsign: #777;
+  --hashsign-col: #777;
 
   --border-col: #000;
 
@@ -22,7 +22,7 @@
     --bg-col: #000;
     --fg-col: #fff;
 
-    --h-hashsign: #555;
+    --hashsign-col: #555;
 
     --border-col: #fff;
 
@@ -98,9 +98,19 @@ body {
     @apply mb-5;
   }
 
+  h2 {
+    @apply text-5xl;
+    @apply my-5;
+  }
+
   .main-content > h1::before {
     content: "# ";
-    color: var(--h-hashsign);
+    color: var(--hashsign-col);
+  }
+
+  .main-content > h2::before {
+    content: "## ";
+    color: var(--hashsign-col);
   }
 
   .navbar-mobile > nav > ul > li > a,
@@ -121,5 +131,9 @@ body {
   .main-content > p > a,
   .main-conent > a {
     @apply underline hover:text-blue-400 focus:text-blue-400;
+  }
+
+  .main-content > li {
+    @apply ml-5;
   }
 }

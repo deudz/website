@@ -13,6 +13,7 @@ import Navbar from "./Navbar";
 
 import type { LinksFunction } from "@remix-run/node";
 import styles from "~/tailwind.css?url";
+import Footer from "./Footer";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -54,6 +55,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ScrollRestoration />
         <Scripts />
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   );
